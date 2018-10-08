@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements
 
         CheckBox locationPermissions = (CheckBox) findViewById(R.id.location_permission_checkbox);
         if (ActivityCompat.checkSelfPermission(MainActivity.this,
-                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             locationPermissions.setChecked(false);
         } else {
             locationPermissions.setChecked(true);
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements
 
     public void onLocationPermissionClicked(View view) {
         ActivityCompat.requestPermissions(MainActivity.this,
-                new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSIONS_REQUEST_FINE_LOCATION);
+                new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSIONS_REQUEST_FINE_LOCATION);
     }
 
     public void onAddPlaceButtonClicked(View view) {
